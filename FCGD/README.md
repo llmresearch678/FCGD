@@ -2,9 +2,7 @@
 
 <img src="https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python&logoColor=white"/>
 <img src="https://img.shields.io/badge/PyTorch-1.13%2B-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white"/>
-<img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge"/>
 <img src="https://img.shields.io/badge/Journal-Scientific%20Reports-purple?style=for-the-badge"/>
-<img src="https://img.shields.io/badge/Status-Published-brightgreen?style=for-the-badge"/>
 
 <br/>
 <br/>
@@ -12,22 +10,6 @@
 # 🧠 FCGD
 ## Frequency-Conditioned Graph Diffusion for<br/>Robust Unsupervised Domain Adaptation in Medical Image Segmentation
 
-<br/>
-
-> **Usman Ahmad Usmani¹\*, Arunava Roy², Junzo Watada³**
->
-> ¹ *School of AI & Robotics, Xiamen University Malaysia* &nbsp;|&nbsp;
-> ² *University of Memphis, USA* &nbsp;|&nbsp;
-> ³ *Waseda University, Japan*
->
-> 📧 usmanahmad.usmani@xmu.edu.my
-
-<br/>
-
-[![Paper](https://img.shields.io/badge/📄%20Paper-Scientific%20Reports-blue?style=flat-square)](https://www.nature.com/srep)
-[![arXiv](https://img.shields.io/badge/arXiv-Preprint-b31b1b?style=flat-square&logo=arxiv)](https://arxiv.org)
-[![GitHub Stars](https://img.shields.io/github/stars/usmanusmani/FCGD?style=flat-square&color=yellow)](https://github.com/usmanusmani/FCGD/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/usmanusmani/FCGD?style=flat-square)](https://github.com/usmanusmani/FCGD/network)
 
 </div>
 
@@ -421,20 +403,7 @@ $$U(u,v) = \frac{1}{M-1}\sum_{m=1}^M \|\hat{y}^{(m)}(u,v) - \bar{y}(u,v)\|_2^2$$
 
 ---
 
-## 🤝 Citation
 
-If you find FCGD useful in your research, please cite:
-
-```bibtex
-@article{usmani2025fcgd,
-  title   = {Robust Unsupervised Domain Adaptation for Medical Image Segmentation
-             via Frequency-Conditioned Graph Diffusion},
-  author  = {Usmani, Usman Ahmad and Roy, Arunava and Watada, Junzo},
-  journal = {Scientific Reports},
-  year    = {2025},
-  publisher = {Nature Publishing Group}
-}
-```
 
 ---
 
@@ -446,7 +415,7 @@ This project is released under the [MIT License](LICENSE).
 
 ## 🙏 Acknowledgements
 
-We sincerely thank **Prof. Ari Happonen** (LUT University, Finland) for valuable guidance and discussions. We also acknowledge the creators of the public benchmarks: MMWHS, CHAOS, and MS-CMRSeg.
+The authors gratefully acknowledge the institutional support and research environment provided by **Xiamen University Malaysia** and the **University of Memphis, USA**.
 
 Baseline implementations reference:
 [AdaOutput](https://github.com/wasidennis/AdaptSegNet) ·
