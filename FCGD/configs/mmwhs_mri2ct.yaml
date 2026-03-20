@@ -1,0 +1,50 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# FCGD Configuration: MMWHS  MRI → CT
+# ──────────────────────────────────────────────────────────────────────────────
+
+experiment:
+  name: "fcgd_mmwhs_mri2ct"
+  seed: 42
+
+dataset:
+  name: "mmwhs"
+  root: "/data/MMWHS"
+  source_modality: "mr"
+  target_modality: "ct"
+  img_size: 256
+  batch_size: 4
+  num_workers: 4
+  num_classes: 5               # 0=BG, 1=MYO, 2=LAC, 3=LVC, 4=AA
+  class_names: ["MYO", "LAC", "LVC", "AA"]
+
+model:
+  in_channels: 1
+  num_classes: 5
+  img_size: 256
+  enc_channels: [32, 64, 128, 256]
+  num_nodes: 256               # N (graph nodes)
+  gnn_layers: 3                # L
+  gnn_hidden_dim: 256          # d_L
+  freq_dim: 128                # d_f
+  diff_timesteps: 10           # T
+  mc_samples: 10               # M (Monte Carlo inference samples)
+
+training:
+  epochs: 200
+  lr_seg: 1.0e-4
+  lr_disc: 1.0e-4
+  lr_diff: 5.0e-5
+  weight_decay: 1.0e-5
+  lambda_str: 0.1              # λ  structural consistency weight
+  mu_adv: 0.01                 # µ  adversarial alignment weight
+  grad_clip: 1.0
+  amp: true                    # mixed precision training
+  finetune_diff: false         # end-to-end diffusion fine-tuning
+  pretrain_diff_epochs: 10
+  val_every: 5
+  save_every: 10
+
+output:
+  dir: "outputs/fcgd_mmwhs_mri2ct"
+  save_vis: true
+  vis_every: 10

@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Data and outputs
+/data/
+outputs/
+experiments/
+*.pth
+*.pt
+*.pkl
+
+# Logs
+*.log
+runs/
+wandb/
+tensorboard_logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Medical imaging data
+*.nii
+*.nii.gz
+*.dcm
+*.mha
+*.mhd
+
+# Figures (generated)
+assets/generated/

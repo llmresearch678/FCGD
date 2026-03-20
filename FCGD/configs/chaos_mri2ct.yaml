@@ -1,0 +1,47 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# FCGD Configuration: CHAOS  MRI → CT
+# ──────────────────────────────────────────────────────────────────────────────
+experiment:
+  name: "fcgd_chaos_mri2ct"
+  seed: 42
+
+dataset:
+  name: "chaos"
+  root: "/data/CHAOS"
+  source_modality: "MR"
+  target_modality: "CT"
+  img_size: 256
+  batch_size: 4
+  num_workers: 4
+  num_classes: 5               # 0=BG, 1=liver, 2=RK, 3=LK, 4=spleen
+  class_names: ["Liver", "RK", "LK", "Spleen"]
+
+model:
+  in_channels: 1
+  num_classes: 5
+  img_size: 256
+  enc_channels: [32, 64, 128, 256]
+  num_nodes: 256
+  gnn_layers: 3
+  gnn_hidden_dim: 256
+  freq_dim: 128
+  diff_timesteps: 10
+  mc_samples: 10
+
+training:
+  epochs: 200
+  lr_seg: 1.0e-4
+  lr_disc: 1.0e-4
+  lr_diff: 5.0e-5
+  weight_decay: 1.0e-5
+  lambda_str: 0.1
+  mu_adv: 0.01
+  grad_clip: 1.0
+  amp: true
+  finetune_diff: false
+  pretrain_diff_epochs: 10
+  val_every: 5
+  save_every: 10
+
+output:
+  dir: "outputs/fcgd_chaos_mri2ct"

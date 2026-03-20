@@ -1,0 +1,28 @@
+# Core deep learning
+torch>=1.13.0
+torchvision>=0.14.0
+
+# Medical image I/O
+nibabel>=4.0.0
+SimpleITK>=2.2.0
+
+# Scientific computing
+numpy>=1.23.0
+scipy>=1.9.0
+scikit-image>=0.19.0
+
+# Visualisation
+matplotlib>=3.6.0
+Pillow>=9.0.0
+
+# Configuration & utilities
+pyyaml>=6.0
+tqdm>=4.64.0
+
+# Optional (graph library backend)
+# torch-geometric>=2.2.0     # pip install torch-geometric
+# torch-scatter>=2.1.0
+
+# Development / evaluation
+scikit-learn>=1.1.0
+pandas>=1.5.0

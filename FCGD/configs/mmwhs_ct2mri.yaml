@@ -1,0 +1,47 @@
+# ──────────────────────────────────────────────────────────────────────────────
+# FCGD Configuration: MMWHS  CT → MRI
+# ──────────────────────────────────────────────────────────────────────────────
+experiment:
+  name: "fcgd_mmwhs_ct2mri"
+  seed: 42
+
+dataset:
+  name: "mmwhs"
+  root: "/data/MMWHS"
+  source_modality: "ct"
+  target_modality: "mr"
+  img_size: 256
+  batch_size: 4
+  num_workers: 4
+  num_classes: 5
+  class_names: ["MYO", "LAC", "LVC", "AA"]
+
+model:
+  in_channels: 1
+  num_classes: 5
+  img_size: 256
+  enc_channels: [32, 64, 128, 256]
+  num_nodes: 256
+  gnn_layers: 3
+  gnn_hidden_dim: 256
+  freq_dim: 128
+  diff_timesteps: 10
+  mc_samples: 10
+
+training:
+  epochs: 200
+  lr_seg: 1.0e-4
+  lr_disc: 1.0e-4
+  lr_diff: 5.0e-5
+  weight_decay: 1.0e-5
+  lambda_str: 0.1
+  mu_adv: 0.01
+  grad_clip: 1.0
+  amp: true
+  finetune_diff: false
+  pretrain_diff_epochs: 10
+  val_every: 5
+  save_every: 10
+
+output:
+  dir: "outputs/fcgd_mmwhs_ct2mri"
