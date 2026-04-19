@@ -2,8 +2,6 @@
 
 <img src="https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python&logoColor=white"/>
 <img src="https://img.shields.io/badge/PyTorch-1.13%2B-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white"/>
-<img src="https://img.shields.io/badge/Journal-Scientific%20Reports-purple?style=for-the-badge"/>
-
 <br/>
 <br/>
 
